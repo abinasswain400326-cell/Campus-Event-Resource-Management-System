@@ -6,11 +6,11 @@ bookings (venues, equipment) — built with **Angular**, **Spring Boot**, and
 
 ## Features
 
-- 🔐 **JWT authentication** with role-based access control (`ADMIN`, `ORGANIZER`, `ATTENDEE`)
-- 📅 **Event management** — create, edit, cancel events (organizers manage their own; admins manage all)
-- ✅ **RSVP system** — attendees register for events with automatic capacity enforcement and duplicate-RSVP prevention
-- 🏛 **Resource booking with conflict detection** — venues/equipment can't be double-booked; overlapping time windows are rejected with a clear error naming the conflicting event
-- 🖥 **Responsive Angular dashboard** — standalone components, reactive forms, route guards
+-  **JWT authentication** with role-based access control (`ADMIN`, `ORGANIZER`, `ATTENDEE`)
+-  **Event management** — create, edit, cancel events (organizers manage their own; admins manage all)
+-  **RSVP system** — attendees register for events with automatic capacity enforcement and duplicate-RSVP prevention
+-  **Resource booking with conflict detection** — venues/equipment can't be double-booked; overlapping time windows are rejected with a clear error naming the conflicting event
+-  **Responsive Angular dashboard** — standalone components, reactive forms, route guards
 
 ## Tech Stack
 
@@ -122,9 +122,9 @@ message naming the conflicting event and time window.
 
 ## Verified
 
-- ✅ Angular frontend: `ng build` completes with no errors (verified in this environment)
-- ✅ Backend: all 34 Java source files pass structural syntax validation
-- ⚠️ Backend compile/run requires Maven Central access + a live MySQL instance,
+-  Angular frontend: `ng build` completes with no errors (verified in this environment)
+-  Backend: all 34 Java source files pass structural syntax validation
+-  Backend compile/run requires Maven Central access + a live MySQL instance,
   neither of which are reachable from the sandbox this was built in — run
   `mvn spring-boot:run` locally to fully verify.
 

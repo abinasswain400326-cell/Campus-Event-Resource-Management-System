@@ -1,0 +1,19 @@
+<div class="container">
+  <h1>Upcoming Campus Events</h1>
+
+  @if (loading) {
+    <p class="muted">Loading events...</p>
+  } @else if (events.length === 0) {
+    <p class="muted">No events published yet.</p>
+  } @else {
+    <div class="event-grid">
+      @for (event of events; track event.id) {
+        <a [routerLink]="['/events', event.id]" class="card event-card">
+          <h3>{{ event.title }}</h3>
+          <p class="muted">{{ event.venue }} · {{ event.startTime | date:'medium' }}</p>
+          <p class="seats">{{ event.registeredCount }} / {{ event.capacity }} registered</p>
+        </a>
+      }
+    </div>
+  }
+</div>

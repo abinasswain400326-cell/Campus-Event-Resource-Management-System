@@ -10,7 +10,7 @@ bookings (venues, equipment) — built with **Angular**, **Spring Boot**, and
 -  **Event management** — create, edit, cancel events (organizers manage their own; admins manage all)
 -  **RSVP system** — attendees register for events with automatic capacity enforcement and duplicate-RSVP prevention
 -  **Resource booking with conflict detection** — venues/equipment can't be double-booked; overlapping time windows are rejected with a clear error naming the conflicting event
-- 🖥 **Responsive Angular dashboard** — standalone components, reactive forms, route guards
+-  **Responsive Angular dashboard** — standalone components, reactive forms, route guards
 
 ## Tech Stack
 

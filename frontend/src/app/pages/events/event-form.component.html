@@ -1,0 +1,29 @@
+<div class="container">
+  <form class="card" style="max-width:600px;" [formGroup]="form" (ngSubmit)="submit()">
+    <h1>{{ isEditMode ? 'Edit Event' : 'Create New Event' }}</h1>
+
+    @if (errorMessage) { <div class="flash">{{ errorMessage }}</div> }
+
+    <label>Title</label>
+    <input type="text" formControlName="title" />
+
+    <label>Description</label>
+    <textarea rows="4" formControlName="description"></textarea>
+
+    <label>Venue</label>
+    <input type="text" formControlName="venue" />
+
+    <label>Capacity</label>
+    <input type="number" formControlName="capacity" />
+
+    <label>Start Time</label>
+    <input type="datetime-local" formControlName="startTime" />
+
+    <label>End Time</label>
+    <input type="datetime-local" formControlName="endTime" />
+
+    <button type="submit" class="btn-primary" style="margin-top:20px;" [disabled]="form.invalid">
+      {{ isEditMode ? 'Save Changes' : 'Create Event' }}
+    </button>
+  </form>
+</div>

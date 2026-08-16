@@ -1,0 +1,24 @@
+<div class="auth-wrap">
+  <form class="card auth-card" [formGroup]="form" (ngSubmit)="submit()">
+    <h1>Welcome back</h1>
+    <p class="muted">Log in to manage or RSVP to campus events</p>
+
+    @if (errorMessage) {
+      <div class="flash">{{ errorMessage }}</div>
+    }
+
+    <label>Email</label>
+    <input type="email" formControlName="email" />
+
+    <label>Password</label>
+    <input type="password" formControlName="password" />
+
+    <button type="submit" class="btn-primary" style="margin-top:18px;width:100%;" [disabled]="form.invalid">
+      Log In
+    </button>
+
+    <p class="muted" style="margin-top:14px;">
+      No account? <a routerLink="/register">Register</a>
+    </p>
+  </form>
+</div>
